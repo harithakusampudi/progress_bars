@@ -5,13 +5,13 @@ import "antd/dist/antd.css";
 import * as serviceWorker from "./serviceWorker";
 
 import configureStore from "./storeConfiguration";
-import App from "./App";
+import ProgressBars from "./screens";
 
 const { store } = configureStore();
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <App />
+      <ProgressBars />
     </Provider>
   </React.StrictMode>,
   document.getElementById("root")
