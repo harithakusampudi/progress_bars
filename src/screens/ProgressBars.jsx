@@ -9,15 +9,14 @@ const { BarsSection, ButtonsSection } = Components;
 
 const ProgressBars = (props) => {
   const [loading, setLoading] = useState(props.loading);
-  const { getProgressBarsData } = props.actions;
 
   useEffect(() => {
     setLoading(props.loading);
   }, [props]);
 
   useEffect(() => {
-    getProgressBarsData();
-  }, [getProgressBarsData]);
+    props.actions.getProgressBarsData();
+  }, [props.actions]);
 
   return (
     <Spin spinning={loading}>

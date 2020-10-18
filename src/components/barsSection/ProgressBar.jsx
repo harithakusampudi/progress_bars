@@ -1,5 +1,5 @@
 import React from "react";
-import { getBarColorAndProgress } from "../../utils";
+import getBarColorAndProgress from "../../utils";
 import Styles from "./styles";
 
 const { BarWrapper, Bar, InnerBar, BarNumber } = Styles;
