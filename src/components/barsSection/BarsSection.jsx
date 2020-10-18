@@ -5,25 +5,21 @@ import Styles from "./styles";
 const { EachBarWrapper, Limit } = Styles;
 
 const BarsSection = (props) => {
-  const [barsData, setBarsData] = useState(props.barsData);
+  const [barsData, setBarsData] = useState(props?.barsData);
 
   useEffect(() => {
-    setBarsData(props.barsData);
-  }, [props.barsData]);
+    setBarsData(props?.barsData);
+  }, [props?.barsData]);
   return (
     <>
-      {barsData && barsData.bars && (
-        <>
-          <Limit>Bars Total : {barsData.limit}</Limit>
-          {barsData?.bars.map((eachBar, index) => {
-            return (
-              <EachBarWrapper key={index}>
-                <ProgressBar barValue={eachBar} limit={barsData.limit} />
-              </EachBarWrapper>
-            );
-          })}
-        </>
-      )}
+      <Limit>Bars Total : {barsData?.limit}</Limit>
+      {barsData?.bars.map((eachBar, index) => {
+        return (
+          <EachBarWrapper key={index}>
+            <ProgressBar barValue={eachBar} limit={barsData?.limit} />
+          </EachBarWrapper>
+        );
+      })}
     </>
   );
 };

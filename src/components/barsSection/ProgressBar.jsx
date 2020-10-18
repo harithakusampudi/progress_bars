@@ -5,16 +5,16 @@ import Styles from "./styles";
 const { BarWrapper, Bar, InnerBar, BarNumber } = Styles;
 
 const ProgressBar = (props) => {
-  const percentage = (props.barValue / props.limit) * 100;
+  const percentage = (props?.barValue / props?.limit) * 100;
   return (
     <BarWrapper>
       <Bar>
         <InnerBar
-          color={getBarColorAndProgress(percentage).color}
-          widthPercentage={getBarColorAndProgress(percentage).widthPercentage}
+          color={getBarColorAndProgress(percentage)?.color}
+          widthPercentage={getBarColorAndProgress(percentage)?.widthPercentage}
         />
       </Bar>
-      <BarNumber>{props.barValue}</BarNumber>
+      <BarNumber>{props?.barValue}</BarNumber>
     </BarWrapper>
   );
 };
