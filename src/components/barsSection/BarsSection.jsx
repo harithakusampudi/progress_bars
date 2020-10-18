@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import ProgressBar from "./ProgressBar";
 import Styles from "./styles";
 
-const { EachBarWrapper, Limit, SpinWrapper } = Styles;
+const { EachBarWrapper, Limit } = Styles;
 
 const BarsSection = (props) => {
   const [barsData, setBarsData] = useState(props.barsData);
@@ -12,10 +12,10 @@ const BarsSection = (props) => {
   }, [props.barsData]);
   return (
     <>
-      {barsData.bars && (
+      {barsData && barsData.bars && (
         <>
           <Limit>Bars Total : {barsData.limit}</Limit>
-          {barsData.bars.map((eachBar, index) => {
+          {barsData?.bars.map((eachBar, index) => {
             return (
               <EachBarWrapper key={index}>
                 <ProgressBar barValue={eachBar} limit={barsData.limit} />
