@@ -30,8 +30,8 @@ it("Render bars based on prop data", () => {
 it("Render Three bars", () => {
   const props = {
     barsData: {
-      bars: [20, 30, 40],
-      buttons: [10],
+      bars: [30, 30, 20],
+      buttons: ["10"],
     },
   };
   const wrapper = mount(<BarsSection {...props} />);
@@ -43,7 +43,7 @@ it("Empty bars", () => {
   const props = {
     barsData: {
       bars: [],
-      buttons: [10],
+      buttons: ["10"],
     },
   };
   const wrapper = mount(<BarsSection {...props} />);
