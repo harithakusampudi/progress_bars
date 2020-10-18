@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { Spin } from "antd";
 
-import Styles from "./style";
+import Components from "../components";
+import Styles from "./styles";
 
 const { AppWrapper, ProgressBarWrapper, ContentWrapper, Title } = Styles;
+const { BarsSection, ButtonsSection } = Components;
 
 const ProgressBars = (props) => {
   const [loading, setLoading] = useState(props.loading);
@@ -24,7 +26,8 @@ const ProgressBars = (props) => {
             <>
               <Title>Progress Bars</Title>
               <ContentWrapper>
-                <div />
+                <BarsSection />
+                <ButtonsSection />
               </ContentWrapper>
             </>
           )}
