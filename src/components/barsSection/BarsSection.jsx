@@ -12,7 +12,7 @@ const BarsSection = (props) => {
   }, [props?.barsData]);
   return (
     <>
-      <Limit>Bars Total : {barsData?.limit}</Limit>
+      <Limit>Limit : {barsData?.limit}</Limit>
       {barsData?.bars.map((eachBar, index) => {
         return (
           <EachBarWrapper key={index}>
