@@ -10,7 +10,7 @@ const BarWrapper = styled.div`
 const Bar = styled.div`
   height: 15px;
   background-color: #f5f5f5;
-  width: 100%;
+  width: 90%;
   display: flex;
   border-radius: 10px;
 `;
@@ -53,6 +53,7 @@ const BarNumber = styled.div`
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   margin-left: 0.5vw;
   font-size: 14px;
+  width: 10%;
   color: #787878;
 `;
 export default {
