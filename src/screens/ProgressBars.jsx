@@ -16,7 +16,7 @@ const ProgressBars = (props) => {
 
   useEffect(() => {
     props.actions.getProgressBarsData();
-  }, []);
+  }, [props.actions]);
 
   return (
     <Spin spinning={loading}>

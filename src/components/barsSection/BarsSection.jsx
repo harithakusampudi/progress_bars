@@ -8,8 +8,9 @@ const BarsSection = (props) => {
   const [barsData, setBarsData] = useState(props?.barsData);
 
   useEffect(() => {
-    setBarsData(props?.barsData);
-  }, [props?.barsData]);
+    setBarsData(props.barsData);
+  }, [props.barsData]);
+
   return (
     <>
       <Limit>Limit : {barsData?.limit}</Limit>

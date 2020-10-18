@@ -29,8 +29,8 @@ const ButtonsSection = (props) => {
   const [selectedBar, setSelectedBar] = useState(0);
 
   useEffect(() => {
-    setBarsData(props?.barsData);
-  }, [props?.barsData]);
+    setBarsData(props.barsData);
+  }, [props.barsData]);
 
   const onButtonClick = (value) => {
     const barValue = barsData?.bars[selectedBar];

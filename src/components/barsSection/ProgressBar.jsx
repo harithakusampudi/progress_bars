@@ -1,11 +1,11 @@
 import React from "react";
-import { getBarColorAndProgress } from "../../utils";
+import getBarColorAndProgress from "../../utils";
 import Styles from "./styles";
 
 const { BarWrapper, Bar, InnerBar, BarNumber } = Styles;
 
 const ProgressBar = (props) => {
-  const percentage = (props?.barValue / props?.limit) * 100;
+  const percentage = Math.trunc((props?.barValue / props?.limit) * 100);
   return (
     <BarWrapper>
       <Bar>
